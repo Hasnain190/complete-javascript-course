@@ -324,7 +324,7 @@ h4 {
 
 .operations__content--active {
   display: grid;
-  grid-template-columns: 7rem 1fr;
+  /* grid-template-columns: 7rem 1fr; */
   column-gap: 3rem;
   row-gap: 0.5rem;
 }
@@ -356,18 +356,23 @@ h4 {
 .operations__icon--1 {
   background-color: var(--color-secondary-opacity);
 }
+
 .operations__icon--2 {
   background-color: var(--color-primary-opacity);
 }
+
 .operations__icon--3 {
   background-color: var(--color-tertiary-opacity);
 }
+
 .operations__icon--1 svg {
   fill: var(--color-secondary-darker);
 }
+
 .operations__icon--2 svg {
   fill: var(--color-primary);
 }
+
 .operations__icon--3 svg {
   fill: var(--color-tertiary);
 }
@@ -397,7 +402,7 @@ h4 {
   transition: transform 1s;
 }
 
-.slide > img {
+.slide>img {
   /* Only for images that have different size than slide */
   width: 100%;
   height: 100%;
@@ -450,7 +455,7 @@ h4 {
   transition: all 0.5s;
 
   /* Only necessary when overlying images */
-  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+  box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7);
 }
 
 .dots__dot:last-child {
@@ -458,8 +463,8 @@ h4 {
 }
 
 .dots__dot--active {
-  /* background-color: #fff; */
-  background-color: #888;
+  background-color: #fff;
+  /* background-color: #888; */
   opacity: 1;
 }
 
@@ -506,6 +511,11 @@ h4 {
   grid-row: 1 / span 2;
   width: 6.5rem;
   border-radius: 50%;
+  background-color: #666;
+  color: #f3f3f3;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
 }
 
 .testimonial__name {
@@ -544,6 +554,23 @@ h4 {
 .section--sign-up .btn {
   font-size: 1.9rem;
   padding: 2rem 5rem;
+}
+
+/* section--ambed */
+.section__embed {
+  display: flex;
+  justify-content: space-around;
+}
+
+.section__embed--like {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.section--fiverr {
+  margin: 1.2rem;
 }
 
 /* FOOTER */
