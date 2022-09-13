@@ -201,72 +201,72 @@ account.latest = 43;
 ////////////////////////////////////////////////////////////
 // Object.create()
 
-const PersonProto = {
-    calcAge() {
-        return 2000 - this.birthYear
-    },
+// const PersonProto = {
+//     calcAge() {
+//         return 2000 - this.birthYear
+//     },
 
-    init(name, birthYear) {
-        this.name = name
-        this.birthYear = birthYear
-
-
+//     init(name, birthYear) {
+//         this.name = name
+//         this.birthYear = birthYear
 
 
-    }
 
 
-}
+//     }
 
 
-console.log(PersonProto)
-const usama = Object.create(PersonProto)
-// usama.name = "Usama Ashfaq"
-// usama.age = 23
-
-const person = function (name, birthYear) {
-    this.name = name
-    this.birthYear = birthYear
+// }
 
 
-}
+// console.log(PersonProto)
+// const usama = Object.create(PersonProto)
+// // usama.name = "Usama Ashfaq"
+// // usama.age = 23
+
+// const person = function (name, birthYear) {
+//     this.name = name
+//     this.birthYear = birthYear
 
 
-usama.init("usama", 21)
+// }
 
-console.log(usama)
+
+// usama.init("usama", 21)
+
+// console.log(usama)
 
 
 // ////////////////////////////////////////////////////////////////
 // Coding Challenge #2
 
-class Car {
-    constructor(make, speed) {
-        this.make = make
-        this.speed = speed
-    }
-    accelerate() {
-        return this.speed += 10
-    }
-    brake() {
-        return speed -= 5
-    }
+// class Car {
+//     constructor(make, speed) {
+//         this.make = make
+//         this.speed = speed
+//     }
+//     accelerate() {
+//         return this.speed += 10
+//     }
+//     brake() {
+//         return speed -= 5
+//     }
 
-    get speedUS() {
-        return this.speed / 1.6
-    }
+//     get speedUS() {
+//         return this.speed / 1.6
+//     }
 
-    set speedUS(speed) {
-        this.speed = speed * 1.6
-    }
+//     set speedUS(speed) {
+//         this.speed = speed * 1.6
+//     }
 
-}
+// }
 
-const Ford = new Car("Ford ", 120)
-Ford.brake
-Ford.speed = 199
+// const Ford = new Car("Ford ", 120)
+// Ford.brake
+// Ford.speed = 199
 
-console.log(Ford.speedUS)
+// console.log(Ford.speedUS)
 
 var book = {
     year: 2004,
@@ -342,3 +342,283 @@ Student.prototype.introduce = function () {
 console.log(Mile)
 
 Mile.introduce()
+///////////////////////////////////////
+// Coding Challenge #3
+
+/* 
+1. Use a constructor function to implement an Electric Car (called EV) as a CHILD "class" of Car. Besides a make and current speed, the EV also has the current battery charge in % ('charge' property);
+2. Implement a 'chargeBattery' method which takes an argument 'chargeTo' and sets the battery charge to 'chargeTo';
+3. Implement an 'accelerate' method that will increase the car's speed by 20, and decrease the charge by 1%. Then log a message like this: 'Tesla going at 140 km/h, with a charge of 22%';
+4. Create an electric car object and experiment with calling 'accelerate', 'brake' and 'chargeBattery' (charge to 90%). Notice what happens when you 'accelerate'! HINT: Review the definition of polymorphism 😉
+
+DATA CAR 1: 'Tesla' going at 120 km/h, with a charge of 23%
+
+GOOD LUCK 😀
+*/
+
+// function Car(make, speed) {
+//     this.make = make
+//     this.speed = speed
+// }
+
+// Car.prototype.accelerate = function () {
+
+//     this.speed += 10
+//     console.log(`%c Tesla going at ${this.speed}, with a charge of ${this.battery}`, " background-color:'yellow'; ")
+
+
+// }
+
+// Car.prototype.brake = function () {
+
+//     this.speed -= 20
+//     console.log(`%c Tesla going at ${this.speed}, with a charge of ${this.battery}`, " background-color:black ; color: white;")
+// }
+
+// function EV(make, speed, battery) {
+//     // this.make = make
+//     // this.speed = speed
+//     Car.call(this, make, speed)
+//     this.battery = battery
+// }
+
+
+// EV.prototype = Object.create(Car.prototype)
+// EV.prototype.constructor = EV
+
+
+// EV.prototype.chargeBattery = function (chargeTo) {
+//     this.battery = chargeTo
+
+// }
+// EV.prototype.accelerate = function () {
+//     this.speed += 20
+//     this.battery -= 1
+//     console.log(`%c ${this.make} going at ${this.speed}, with a charge of ${this.battery}`, " background-color:'yellow'; ")
+
+
+// }
+
+
+// console.log(EV.prototype)
+
+
+// class Car {
+//     constructor(make, speed) {
+//         this.make = make
+//         this.speed = speed
+
+//     }
+//     accelerate() {
+//         this.speed += 10
+//         console.log(`%c Tesla going at ${this.speed}, with a charge of ${this.battery}`, " background-color:'yellow'; ")
+//     }
+
+//     brake() {
+
+//         this.speed -= 20
+//         console.log(`%c ${this.make} going at ${this.speed}, with a charge of ${this.battery} `, " background-color:black ; color: white;")
+//     }
+
+// }
+
+// class EV extends Car {
+//     constructor(make, speed, battery) {
+//         // this.make = make
+//         // this.speed = speed
+
+//         super(make, speed)
+//         this.battery = battery
+
+//     }
+//     accelerate() {
+//         this.speed += 10
+//         this.battery -= 1
+//         console.log(`%c ${this.make} going at ${this.speed}, with a charge of ${this.battery} `, " background-color:'yellow'; ")
+//     }
+
+//     chargeBattery(chargeTo) {
+//         this.battery = chargeTo
+
+
+//     }
+// }
+
+// const Tesla = new EV('Tesla', 120, 90)
+
+// Tesla.chargeBattery(100)
+// console.log(Tesla)
+// Tesla.accelerate()
+// Tesla.brake()
+// Tesla.brake()
+
+// Tesla.brake()
+// Object.create()
+
+const PersonProto = {
+    calcAge() {
+        return 2020 - this.birthYear
+    },
+    init(name, birthYear) {
+        this.name = name
+        this.birthYear = birthYear
+
+        this.age = this.calcAge()
+    }
+}
+
+
+console.log(PersonProto)
+const Ahmad = Object.create(PersonProto)
+const Ashfaq = Object.create(Ahmad)
+const usama = Object.create(Ashfaq)
+// usama.name = "Usama Ashfaq"
+// usama.age = 23
+
+usama.init = function (name, birthYear, information) {
+    // this.name = name
+    // this.birthYear = birthYear
+
+    PersonProto.init.call(this, name, birthYear)
+
+
+    this.information = information
+
+}
+Ashfaq.init = function (name, birthYear, diploma) {
+    // this.name = name
+    // this.birthYear = birthYear
+
+    PersonProto.init.call(this, name, birthYear)
+
+
+    this.diploma = diploma
+
+}
+Ahmad.init = function (name, birthYear, zameen) {
+    // this.name = name
+    // this.birthYear = birthYear
+
+    PersonProto.init.call(this, name, birthYear)
+
+
+    this.zameen = zameen
+
+}
+
+usama.init("Usama", 1998, " computer and Technology")
+Ashfaq.init("Ashfaq", 1947, "Chemical Analysis")
+Ahmad.init("Ahmad", 1876, "500 Murabba Miles")
+
+console.log(usama)
+// console.log(Ashfaq)
+// console.log(Ahmad)
+class Account {
+    // Public Fields (instances)
+    // locale = window.navigator.language;
+
+    // Private Fields
+    #pin;
+    #movements = [];
+
+
+    constructor(owner, currency, pin) {
+        this.owner = owner
+        this.currency = currency
+        this.#pin = pin
+        // this._movements = []
+        // this.locale = window.navigator.language
+    }
+
+    deposit(val) {
+        this.#movements.push(val)
+        return this
+    }
+    withdraw(val) {
+        this.#movements.push(-val)
+        return this
+    }
+    getMovements() {
+        return this.#movements
+    }
+}
+
+const acc1 = new Account("Hasnain", "PKR", "5566")
+
+
+acc1.deposit(323)
+acc1.withdraw(23)
+
+
+
+
+// chaining methods
+acc1.deposit(212).withdraw(232)
+
+console.log(acc1.getMovements())
+
+
+
+
+// //////////////////////////////////////////////////////////////
+// Coding Challenge 4
+
+
+class Car {
+    constructor(make, speed) {
+        this.make = make
+        this.speed = speed
+
+    }
+    accelerate() {
+        this.speed += 10
+        console.log(`%c Tesla going at ${this.speed}, with a charge of ${this._battery}`, " background-color:'yellow'; ")
+        return this
+    }
+
+    brake() {
+
+        this.speed -= 20
+        console.log(`%c ${this.make} decelerated at ${this.speed}, with a charge of ${this._battery} `, " background-color:black ; color: white;")
+
+        return this
+    }
+
+}
+
+class EV extends Car {
+
+
+    constructor(make, speed, battery) {
+        // this.make = make
+        // this.speed = speed
+
+        super(make, speed)
+        this._battery = battery
+
+    }
+    accelerate() {
+        this.speed += 10
+        this._battery -= 1
+        console.log(`%c ${this.make} acclerated at ${this.speed}, with a charge of ${this._battery} `, " background-color:'yellow'; ")
+
+        return this
+    }
+
+    chargeBattery(chargeTo) {
+        this._battery = chargeTo
+
+
+    }
+}
+
+const Tesla = new EV('Tesla', 120, 90)
+
+Tesla.chargeBattery(100)
+console.log(Tesla)
+Tesla.brake().accelerate().accelerate().brake()
+
+// Tesla.brake()
+// Object.create()
+
+
