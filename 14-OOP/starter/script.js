@@ -614,11 +614,31 @@ class EV extends Car {
 
 const Tesla = new EV('Tesla', 120, 90)
 
-Tesla.chargeBattery(100)
-console.log(Tesla)
-Tesla.brake().accelerate().accelerate().brake()
+    // Tesla.chargeBattery(100)
+    // console.log(Tesla)
+    // Tesla.brake().accelerate().accelerate().brake()
 
-// Tesla.brake()
-// Object.create()
+    // Tesla.brake()
+    // Object.create()
 
 
+    //onst promise = new Promise((res, rej) => {
+    // res("coming through ")
+    // return fetch("http://www.google.com")
+
+    // rej("net lagwa lo")
+    // })
+
+    // .then((val) => {
+
+
+    //     console.log({ val });
+    //     return "34"
+
+    // })
+    // .then((val) => console.log({ val }))
+    // .then((val) => console.log({ val }))
+
+
+    // .then((val) => console.log({ val }))
+    .catch(val => { console.log(val) })
